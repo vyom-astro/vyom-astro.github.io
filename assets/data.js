@@ -105,6 +105,56 @@ export const COMPETITORS = [
     audience: "Young professionals",
     pricing: "Free + paid reports",
     oneLiner: "Modern India app with momentum, but fewer pro-level tools."
+  },
+  {
+    slug: "nebula",
+    name: "Nebula",
+    company: "Genesis",
+    batch: "batch3",
+    market: "Global",
+    audience: "Casual Western, psychic-curious",
+    pricing: "Subscription + per-min psychic",
+    oneLiner: "Large user base with Western focus and psychic advisor integration."
+  },
+  {
+    slug: "thepattern",
+    name: "The Pattern",
+    company: "The Pattern",
+    batch: "batch3",
+    market: "Global",
+    audience: "Introspective millennials",
+    pricing: "Subscription",
+    oneLiner: "Minimalist psychological focus with deep personality insights."
+  },
+  {
+    slug: "timepassages",
+    name: "TimePassages",
+    company: "AstroGraph",
+    batch: "batch3",
+    market: "Global",
+    audience: "Intermediate–advanced Western",
+    pricing: "Subscription + per-chart content",
+    oneLiner: "Professional-grade Western charting with deep technical tools."
+  },
+  {
+    slug: "sanctuary",
+    name: "Sanctuary",
+    company: "Sanctuary",
+    batch: "batch3",
+    market: "Global",
+    audience: "Western casual, millennials",
+    pricing: "Free + per consult",
+    oneLiner: "Modern aesthetics with live chat access to professional readers."
+  },
+  {
+    slug: "vama",
+    name: "VAMA",
+    company: "Vama App",
+    batch: "batch3",
+    market: "India",
+    audience: "Indian users, devotional + astro",
+    pricing: "Free + per consult",
+    oneLiner: "Vedic app blending astrology with virtual puja and darshan tools."
   }
 ];
 
@@ -235,6 +285,75 @@ export const BATCHES = {
           { f: "Revenue model", v: "Subscription + tokens", c: { astroyogi: "Per-minute consult", instaastro: "Per-minute consult", ganeshaspeaks: "Per-minute consult", chani: "Subscription only", melooha: "Reports + Q&A packs" } },
           { f: "Free tier depth", v: "Charts + learning", c: { astroyogi: "Horoscope + basic kundli", instaastro: "Basic daily + kundli", ganeshaspeaks: "Daily horoscope only", chani: "Daily horoscope + birth chart", melooha: "Daily horoscope only" } },
           { f: "Downloads / scale", v: "New / growing", c: { astroyogi: "30M+ users, since 2001", instaastro: "10M+ downloads", ganeshaspeaks: "50M consultations, since 2003", chani: "Large global, 2020+", melooha: "374K users, growing fast" } }
+        ]
+      }
+    ]
+  },
+  batch3: {
+    title: "Vyom vs Nebula, The Pattern, TimePassages, Sanctuary, VAMA",
+    slugs: ["nebula", "thepattern", "timepassages", "sanctuary", "vama"],
+    groups: [
+      {
+        id: "core",
+        title: "Core features",
+        rows: [
+          { f: "Astrology system", v: "Vedic / Jyotish", c: { nebula: "Western + psychic", thepattern: "Western / psychological", timepassages: "Western, some Vedic", sanctuary: "Western", vama: "Vedic / Jyotish" } },
+          { f: "Birth chart / Kundli", v: "Yes", c: { nebula: "Basic Western", thepattern: "Psychological chart", timepassages: "Yes", sanctuary: "Yes", vama: "Yes" } },
+          { f: "Divisional charts (Varga)", v: "D1–D144", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "No" } },
+          { f: "Dasha system", v: "Maha–Pratyantar", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "Basic" } },
+          { f: "Automated Yoga identification", v: "100s of yogas", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "No" } },
+          { f: "Transit overlay on natal chart", v: "Yes", c: { nebula: "No", thepattern: "Cycle tracking", timepassages: "Yes", sanctuary: "Partial", vama: "Yes" } },
+          { f: "Progressions / Solar returns", v: "No", c: { nebula: "No", thepattern: "No", timepassages: "Yes", sanctuary: "No", vama: "No" } },
+          { f: "Synastry / Compatibility chart", v: "Kundli Milan", c: { nebula: "Compatibility %", thepattern: "Bonds — deep analysis", timepassages: "Bi-wheel + meter", sanctuary: "Basic", vama: "Kundli matching" } },
+          { f: "Panchang / Choghadiya", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "Yes" } },
+          { f: "Mangal Dosha calculator", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "Yes" } },
+          { f: "Numerology", v: "Pythagorean + Vedic", c: { nebula: "Basic", thepattern: "No", timepassages: "Basic", sanctuary: "No", vama: "No" } },
+          { f: "Daily horoscope feed", v: "Vedic Scoreboard", c: { nebula: "Yes", thepattern: "Daily patterns / cycles", timepassages: "Yes", sanctuary: "Yes", vama: "Yes" } },
+          { f: "Tarot", v: "No", c: { nebula: "Card of the day", thepattern: "No", timepassages: "No", sanctuary: "Some", vama: "No" } },
+          { f: "Psychic / live reader access", v: "No", c: { nebula: "1500+ advisors", thepattern: "No", timepassages: "No", sanctuary: "Live chat", vama: "200+ astrologers" } },
+          { f: "Personalized remedies (Upayas)", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "Some" } },
+          { f: "Vedic puja / devotional tools", v: "No", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "Puja booking, darshan" } },
+          { f: "Biorhythm tracking", v: "No", c: { nebula: "Yes", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "No" } }
+        ]
+      },
+      {
+        id: "tech",
+        title: "Technology",
+        rows: [
+          { f: "AI integration", v: "Uttara AI — chart-based", c: { nebula: "AI-assisted content", thepattern: "Pattern AI — psychological", timepassages: "Human-written, no AI", sanctuary: "Some AI", vama: "AI-powered" } },
+          { f: "Personalization basis", v: "Full Vedic birth chart", c: { nebula: "Sun sign + birth chart", thepattern: "Deep psychological birth data", timepassages: "Full Western birth chart", sanctuary: "Birth chart", vama: "Full Vedic birth chart" } },
+          { f: "Social / friend features", v: "No", c: { nebula: "Compatibility share", thepattern: "Bonds with friends, celebs", timepassages: "Compare charts", sanctuary: "No", vama: "No" } },
+          { f: "Tap-to-learn interactive chart", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "Point-and-click", sanctuary: "No", vama: "No" } },
+          { f: "Astrology glossary / learning", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "Yes", sanctuary: "Articles", vama: "No" } },
+          { f: "CRM for astrologers", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "No" } },
+          { f: "Chart deep-link sharing", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "Share via social", sanctuary: "No", vama: "No" } },
+          { f: "Desktop / web version", v: "Mac + Vision Pro", c: { nebula: "No", thepattern: "No", timepassages: "Windows, Mac, Web", sanctuary: "No", vama: "No" } },
+          { f: "Guided meditations / audio", v: "No", c: { nebula: "No", thepattern: "No", timepassages: "No", sanctuary: "No", vama: "No" } }
+        ]
+      },
+      {
+        id: "ux",
+        title: "Experience",
+        rows: [
+          { f: "Ad-free", v: "Yes", c: { nebula: "Paid only", thepattern: "Paid only", timepassages: "Yes", sanctuary: "Heavy ads", vama: "Paid only" } },
+          { f: "UI quality / modernity", v: "Clean, modern", c: { nebula: "Polished, dark", thepattern: "Minimal, psychological", timepassages: "Functional, older-feel", sanctuary: "Modern", vama: "Modern" } },
+          { f: "Chart styles (N / S / E Indian)", v: "Yes", c: { nebula: "No", thepattern: "No", timepassages: "Western wheel only", sanctuary: "No", vama: "Some Vedic" } },
+          { f: "Platform", v: "iOS, Android, Mac, Vision", c: { nebula: "iOS, Android", thepattern: "iOS only", timepassages: "iOS, Android, Mac, Web", sanctuary: "iOS, Android", vama: "iOS, Android" } },
+          { f: "Languages", v: "EN, HI, ES, DE", c: { nebula: "EN + some", thepattern: "EN only", timepassages: "EN only", sanctuary: "EN only", vama: "EN, HI + regional" } },
+          { f: "Offline support", v: "Partial", c: { nebula: "No", thepattern: "No", timepassages: "Partial", sanctuary: "No", vama: "No" } },
+          { f: "Privacy / no data selling", v: "Yes", c: { nebula: "Users report billing issues", thepattern: "Not stated", timepassages: "Yes", sanctuary: "Not stated", vama: "Not stated" } }
+        ]
+      },
+      {
+        id: "biz",
+        title: "Business model",
+        rows: [
+          { f: "Annual subscription price", v: "$24.90/yr", c: { nebula: "$24.99/mo or $29.99/3mo", thepattern: "$19.99/quarter", timepassages: "~$40/yr approx", sanctuary: "Free + per consult", vama: "Free + per consult" } },
+          { f: "Revenue model", v: "Subscription + tokens", c: { nebula: "Subscription + per-min psychic", thepattern: "Subscription", timepassages: "Subscription + per-chart $0.99", sanctuary: "Per-consult chat", vama: "Per-consult" } },
+          { f: "Pricing transparency", v: "Clear", c: { nebula: "Reported confusing; auto-renew complaints", thepattern: "Fair", timepassages: "Clear", sanctuary: "Moderate", vama: "Fair" } },
+          { f: "Free tier depth", v: "Charts + Panchang + learning", c: { nebula: "Basic daily only", thepattern: "Some patterns free", timepassages: "Birth chart + daily horoscope", sanctuary: "Limited", vama: "Daily horoscope + basic kundli" } },
+          { f: "Target audience", v: "Jyotish students + pros", c: { nebula: "Casual Western, psychic-curious", thepattern: "Introspective millennials", timepassages: "Intermediate–advanced Western", sanctuary: "Western casual, millennials", vama: "Indian users, devotional + astro" } },
+          { f: "Scale / maturity", v: "New, growing", c: { nebula: "12M+ users, 2020+", thepattern: "4M+ downloads, 2017+", timepassages: "5M downloads, since 2010+", sanctuary: "3M+ downloads, 2018+", vama: "Growing, VC-backed" } }
         ]
       }
     ]

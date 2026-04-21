@@ -102,42 +102,48 @@ function renderMatrixPage() {
 
   const heading = document.getElementById("matrix-heading");
   const noteDate = document.getElementById("matrix-date");
-  heading.textContent = batch.title;
-  noteDate.textContent = SITE.lastUpdated;
+  if (heading) heading.textContent = batch.title;
+  if (noteDate) noteDate.textContent = SITE.lastUpdated;
 
   const headRow = document.getElementById("matrix-head-row");
   const tableBody = document.getElementById("matrix-body");
 
-  headRow.innerHTML = "<th>Feature</th><th>Vyom</th>";
-  batch.slugs.forEach((slug) => {
-    const competitor = findCompetitor(slug);
-    if (competitor) {
-      headRow.innerHTML += `<th>${competitor.name}</th>`;
-    }
-  });
-
-  tableBody.innerHTML = "";
-  batch.groups.forEach((group) => {
-    const groupRow = document.createElement("tr");
-    groupRow.className = "group-row";
-    groupRow.dataset.group = group.id;
-    groupRow.innerHTML = `<td colspan="${batch.slugs.length + 2}">${group.title}</td>`;
-    tableBody.appendChild(groupRow);
-
-    group.rows.forEach((row) => {
-      const tr = document.createElement("tr");
-      tr.dataset.group = group.id;
-      let cells = `<td>${row.f}</td><td class="vyom-col">${formatCell(row.v)}</td>`;
-      batch.slugs.forEach((slug) => {
-        cells += `<td>${formatCell(row.c[slug] || "Not listed")}</td>`;
-      });
-      tr.innerHTML = cells;
-      tableBody.appendChild(tr);
+  if (headRow) {
+    headRow.innerHTML = "<th>Feature</th><th>Vyom</th>";
+    batch.slugs.forEach((slug) => {
+      const competitor = findCompetitor(slug);
+      if (competitor) {
+        headRow.innerHTML += `<th>${competitor.name}</th>`;
+      }
     });
-  });
+  }
+
+  if (tableBody) {
+    tableBody.innerHTML = "";
+    batch.groups.forEach((group) => {
+      const groupRow = document.createElement("tr");
+      groupRow.className = "group-row";
+      groupRow.dataset.group = group.id;
+      groupRow.innerHTML = `<td colspan="${batch.slugs.length + 2}">${group.title}</td>`;
+      tableBody.appendChild(groupRow);
+
+      group.rows.forEach((row) => {
+        const tr = document.createElement("tr");
+        tr.dataset.group = group.id;
+        let cells = `<td>${row.f}</td><td class="vyom-col">${formatCell(row.v)}</td>`;
+        batch.slugs.forEach((slug) => {
+          cells += `<td>${formatCell(row.c[slug] || "Not listed")}</td>`;
+        });
+        tr.innerHTML = cells;
+        tableBody.appendChild(tr);
+      });
+    });
+  }
 
   const filters = document.getElementById("group-filters");
-  createFilterButtons(filters, (group) => wireFiltering(tableBody, group));
+  if (filters) {
+    createFilterButtons(filters, (group) => wireFiltering(tableBody, group));
+  }
 }
 
 function renderHubPage() {
