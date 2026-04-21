@@ -96,6 +96,12 @@ h1, h2, h3, .brand strong {
   border-radius: 10px;
 }
 
+.brand div strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .brand div span {
   font-size: 11px;
   text-transform: uppercase;
