@@ -1,0 +1,690 @@
+<h2 class="sr-only">
+  Feature comparison table batch 3: Vyom vs Nebula, The Pattern, TimePassages,
+  Sanctuary, and VAMA.
+</h2>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 1rem 0 1.25rem;
+  }
+  .fb {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 0.5px solid var(--color-border-secondary);
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+  }
+  .fb.on {
+    background: #534ab7;
+    color: #eeedfe;
+    border-color: #534ab7;
+  }
+  .wrap {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    table-layout: fixed;
+  }
+  col.fc {
+    width: 158px;
+  }
+  col.vc {
+    width: 110px;
+  }
+  col.oc {
+    width: 96px;
+  }
+  thead th {
+    padding: 8px 8px 10px;
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: bottom;
+  }
+  thead th.vh {
+    color: #3c3489;
+  }
+  thead .app {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    display: block;
+    margin-bottom: 2px;
+  }
+  thead .sub {
+    font-size: 10px;
+    color: var(--color-text-tertiary);
+    display: block;
+  }
+  .tag {
+    font-size: 10px;
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-top: 2px;
+  }
+  .ti {
+    background: #e1f5ee;
+    color: #085041;
+  }
+  .tg {
+    background: #e6f1fb;
+    color: #0c447c;
+  }
+  .tw {
+    background: #faeeda;
+    color: #633806;
+  }
+  @media (prefers-color-scheme: dark) {
+    .ti {
+      background: #085041;
+      color: #9fe1cb;
+    }
+    .tg {
+      background: #0c447c;
+      color: #b5d4f4;
+    }
+    .tw {
+      background: #633806;
+      color: #fac775;
+    }
+  }
+  tbody tr {
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  tbody tr:hover td {
+    background: var(--color-background-secondary);
+  }
+  tbody tr.hidden {
+    display: none;
+  }
+  td {
+    padding: 8px 8px;
+    vertical-align: middle;
+    color: var(--color-text-primary);
+    word-wrap: break-word;
+  }
+  td.fn {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+  }
+  tr.ch td {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-top: 16px;
+    padding-bottom: 3px;
+    border-bottom: none;
+  }
+  .vy {
+    background: #f5f4fe;
+  }
+  @media (prefers-color-scheme: dark) {
+    .vy {
+      background: #1e1c3a;
+    }
+  }
+  .y {
+    color: #0f6e56;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .n {
+    color: #a32d2d;
+    font-size: 13px;
+  }
+  .p {
+    color: #ba7517;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background: #eeedfe;
+    color: #3c3489;
+    font-weight: 500;
+  }
+  @media (prefers-color-scheme: dark) {
+    .badge {
+      background: #3c3489;
+      color: #cecbf6;
+    }
+  }
+</style>
+
+<div class="filters">
+  <span
+    style="
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      line-height: 26px;
+      margin-right: 2px;
+    "
+    >Filter:</span
+  >
+  <button class="fb on" onclick="filter('all', this)">All</button>
+  <button class="fb" onclick="filter('core', this)">Core</button>
+  <button class="fb" onclick="filter('tech', this)">Technology</button>
+  <button class="fb" onclick="filter('ux', this)">Experience</button>
+  <button class="fb" onclick="filter('biz', this)">Business model</button>
+</div>
+
+<div
+  style="
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    align-items: center;
+  "
+>
+  <span style="font-size: 11px; color: var(--color-text-tertiary)"
+    >Market:</span
+  >
+  <span class="tag ti" style="font-size: 11px; padding: 2px 8px"
+    >India / Vedic</span
+  >
+  <span class="tag tg" style="font-size: 11px; padding: 2px 8px"
+    >Global / Western</span
+  >
+  <span class="tag tw" style="font-size: 11px; padding: 2px 8px"
+    >Western / Professional</span
+  >
+</div>
+
+<div class="wrap">
+  <table>
+    <colgroup>
+      <col class="fc" />
+      <col class="vc" />
+      <col class="oc" />
+      <col class="oc" />
+      <col class="oc" />
+      <col class="oc" />
+      <col class="oc" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th class="vh vy">
+          <span class="badge">You</span><span class="app">Vyom</span
+          ><span class="sub">Oracular</span
+          ><span class="tag ti">India / Vedic</span>
+        </th>
+        <th>
+          <span class="app">Nebula</span><span class="sub">Genesis</span
+          ><span class="tag tg">Global</span>
+        </th>
+        <th>
+          <span class="app">The Pattern</span
+          ><span class="sub">The Pattern</span
+          ><span class="tag tg">Global</span>
+        </th>
+        <th>
+          <span class="app">TimePassages</span
+          ><span class="sub">AstroGraph</span
+          ><span class="tag tw">Pro / Western</span>
+        </th>
+        <th>
+          <span class="app">Sanctuary</span><span class="sub">Sanctuary</span
+          ><span class="tag tg">Global</span>
+        </th>
+        <th>
+          <span class="app">VAMA</span><span class="sub">Vama App</span
+          ><span class="tag ti">India</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="tb3"></tbody>
+  </table>
+</div>
+
+<script>
+  const Y = '<span class="y">Yes</span>';
+  const N = '<span class="n">No</span>';
+  const P = (t) => `<span class="p">${t}</span>`;
+
+  const rows = [
+    { g: "core", h: "Core features" },
+    {
+      g: "core",
+      f: "Astrology system",
+      v: P("Vedic / Jyotish"),
+      nb: P("Western + psychic"),
+      tp: P("Western / psychological"),
+      tm: P("Western, some Vedic"),
+      sa: P("Western"),
+      vm: P("Vedic / Jyotish"),
+    },
+    {
+      g: "core",
+      f: "Birth chart / Kundli",
+      v: Y,
+      nb: P("Basic Western"),
+      tp: P("Psychological chart"),
+      tm: Y,
+      sa: Y,
+      vm: Y,
+    },
+    {
+      g: "core",
+      f: "Divisional charts (Varga)",
+      v: P("D1–D144"),
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "core",
+      f: "Dasha system",
+      v: P("Maha–Pratyantar"),
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: P("Basic"),
+    },
+    {
+      g: "core",
+      f: "Automated Yoga identification",
+      v: P("100s of yogas"),
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "core",
+      f: "Transit overlay on natal chart",
+      v: Y,
+      nb: N,
+      tp: P("Cycle tracking"),
+      tm: Y,
+      sa: P("Partial"),
+      vm: Y,
+    },
+    {
+      g: "core",
+      f: "Progressions / Solar returns",
+      v: N,
+      nb: N,
+      tp: N,
+      tm: Y,
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "core",
+      f: "Synastry / Compatibility chart",
+      v: P("Kundli Milan"),
+      nb: P("Compatibility %"),
+      tp: P("Bonds — deep analysis"),
+      tm: P("Bi-wheel + meter"),
+      sa: P("Basic"),
+      vm: P("Kundli matching"),
+    },
+    {
+      g: "core",
+      f: "Panchang / Choghadiya",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: Y,
+    },
+    {
+      g: "core",
+      f: "Mangal Dosha calculator",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: Y,
+    },
+    {
+      g: "core",
+      f: "Numerology",
+      v: P("Pythagorean + Vedic"),
+      nb: P("Basic"),
+      tp: N,
+      tm: P("Basic"),
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "core",
+      f: "Daily horoscope feed",
+      v: P("Vedic Scoreboard"),
+      nb: Y,
+      tp: P("Daily patterns / cycles"),
+      tm: Y,
+      sa: Y,
+      vm: Y,
+    },
+    {
+      g: "core",
+      f: "Tarot",
+      v: N,
+      nb: P("Card of the day"),
+      tp: N,
+      tm: N,
+      sa: P("Some"),
+      vm: N,
+    },
+    {
+      g: "core",
+      f: "Psychic / live reader access",
+      v: N,
+      nb: P("1500+ advisors"),
+      tp: N,
+      tm: N,
+      sa: P("Live chat"),
+      vm: P("200+ astrologers"),
+    },
+    {
+      g: "core",
+      f: "Personalized remedies (Upayas)",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: P("Some"),
+    },
+    {
+      g: "core",
+      f: "Vedic puja / devotional tools",
+      v: N,
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: P("Puja booking, darshan"),
+    },
+    {
+      g: "core",
+      f: "Biorhythm tracking",
+      v: N,
+      nb: Y,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: N,
+    },
+
+    { g: "tech", h: "Technology" },
+    {
+      g: "tech",
+      f: "AI integration",
+      v: P("Uttara AI — chart-based"),
+      nb: P("AI-assisted content"),
+      tp: P("Pattern AI — psychological"),
+      tm: P("Human-written, no AI"),
+      sa: P("Some AI"),
+      vm: P("AI-powered"),
+    },
+    {
+      g: "tech",
+      f: "Personalization basis",
+      v: P("Full Vedic birth chart"),
+      nb: P("Sun sign + birth chart"),
+      tp: P("Deep psychological birth data"),
+      tm: P("Full Western birth chart"),
+      sa: P("Birth chart"),
+      vm: P("Full Vedic birth chart"),
+    },
+    {
+      g: "tech",
+      f: "Social / friend features",
+      v: N,
+      nb: P("Compatibility share"),
+      tp: P("Bonds with friends, celebs"),
+      tm: P("Compare charts"),
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "tech",
+      f: "Tap-to-learn interactive chart",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: P("Point-and-click"),
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "tech",
+      f: "Astrology glossary / learning",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: Y,
+      sa: P("Articles"),
+      vm: N,
+    },
+    {
+      g: "tech",
+      f: "CRM for astrologers",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "tech",
+      f: "Chart deep-link sharing",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: P("Share via social"),
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "tech",
+      f: "Desktop / web version",
+      v: P("Mac + Vision Pro"),
+      nb: N,
+      tp: N,
+      tm: P("Windows, Mac, Web"),
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "tech",
+      f: "Guided meditations / audio",
+      v: N,
+      nb: N,
+      tp: N,
+      tm: N,
+      sa: N,
+      vm: N,
+    },
+
+    { g: "ux", h: "Experience & design" },
+    {
+      g: "ux",
+      f: "Ad-free",
+      v: Y,
+      nb: P("Paid only"),
+      tp: P("Paid only"),
+      tm: Y,
+      sa: P("Heavy ads"),
+      vm: P("Paid only"),
+    },
+    {
+      g: "ux",
+      f: "UI quality / modernity",
+      v: P("Clean, modern"),
+      nb: P("Polished, dark"),
+      tp: P("Minimal, psychological"),
+      tm: P("Functional, older-feel"),
+      sa: P("Modern"),
+      vm: P("Modern"),
+    },
+    {
+      g: "ux",
+      f: "Chart styles (N / S / E Indian)",
+      v: Y,
+      nb: N,
+      tp: N,
+      tm: P("Western wheel only"),
+      sa: N,
+      vm: P("Some Vedic"),
+    },
+    {
+      g: "ux",
+      f: "Platform",
+      v: P("iOS, Android, Mac, Vision"),
+      nb: P("iOS, Android"),
+      tp: P("iOS only"),
+      tm: P("iOS, Android, Mac, Web"),
+      sa: P("iOS, Android"),
+      vm: P("iOS, Android"),
+    },
+    {
+      g: "ux",
+      f: "Languages",
+      v: P("EN, HI, ES, DE"),
+      nb: P("EN + some"),
+      tp: P("EN only"),
+      tm: P("EN only"),
+      sa: P("EN only"),
+      vm: P("EN, HI + regional"),
+    },
+    {
+      g: "ux",
+      f: "Offline support",
+      v: P("Partial"),
+      nb: N,
+      tp: N,
+      tm: P("Partial"),
+      sa: N,
+      vm: N,
+    },
+    {
+      g: "ux",
+      f: "Privacy / no data selling",
+      v: Y,
+      nb: P("Users report billing issues"),
+      tp: P("Not stated"),
+      tm: Y,
+      sa: P("Not stated"),
+      vm: P("Not stated"),
+    },
+
+    { g: "biz", h: "Business model" },
+    {
+      g: "biz",
+      f: "Annual subscription price",
+      v: P("$24.90/yr"),
+      nb: P("$24.99/mo or $29.99/3mo"),
+      tp: P("$19.99/quarter"),
+      tm: P("~$40/yr approx"),
+      sa: P("Free + per consult"),
+      vm: P("Free + per consult"),
+    },
+    {
+      g: "biz",
+      f: "Revenue model",
+      v: P("Subscription + tokens"),
+      nb: P("Subscription + per-min psychic"),
+      tp: P("Subscription"),
+      tm: P("Subscription + per-chart $0.99"),
+      sa: P("Per-consult chat"),
+      vm: P("Per-consult"),
+    },
+    {
+      g: "biz",
+      f: "Pricing transparency",
+      v: P("Clear"),
+      nb: P("Reported confusing; auto-renew complaints"),
+      tp: P("Fair"),
+      tm: P("Clear"),
+      sa: P("Moderate"),
+      vm: P("Fair"),
+    },
+    {
+      g: "biz",
+      f: "Free tier depth",
+      v: P("Charts + Panchang + learning"),
+      nb: P("Basic daily only"),
+      tp: P("Some patterns free"),
+      tm: P("Birth chart + daily horoscope"),
+      sa: P("Limited"),
+      vm: P("Daily horoscope + basic kundli"),
+    },
+    {
+      g: "biz",
+      f: "Target audience",
+      v: P("Jyotish students + pros"),
+      nb: P("Casual Western, psychic-curious"),
+      tp: P("Introspective millennials"),
+      tm: P("Intermediate–advanced Western"),
+      sa: P("Western casual, millennials"),
+      vm: P("Indian users, devotional + astro"),
+    },
+    {
+      g: "biz",
+      f: "Scale / maturity",
+      v: P("New, growing"),
+      nb: P("12M+ users, 2020+"),
+      tp: P("4M+ downloads, 2017+"),
+      tm: P("5M downloads, since 2010+"),
+      sa: P("3M+ downloads, 2018+"),
+      vm: P("Growing, VC-backed"),
+    },
+  ];
+
+  const tb = document.getElementById("tb3");
+  rows.forEach((r) => {
+    const tr = document.createElement("tr");
+    if (r.h) {
+      tr.className = "ch";
+      tr.dataset.g = r.g;
+      tr.innerHTML = `<td colspan="7">${r.h}</td>`;
+    } else {
+      tr.dataset.g = r.g;
+      tr.innerHTML = `<td class="fn">${r.f}</td><td class="vy">${r.v}</td><td>${r.nb}</td><td>${r.tp}</td><td>${r.tm}</td><td>${r.sa}</td><td>${r.vm}</td>`;
+    }
+    tb.appendChild(tr);
+  });
+
+  function filter(cat, btn) {
+    document.querySelectorAll(".fb").forEach((b) => b.classList.remove("on"));
+    btn.classList.add("on");
+    document.querySelectorAll("#tb3 tr").forEach((tr) => {
+      tr.classList.toggle("hidden", cat !== "all" && tr.dataset.g !== cat);
+    });
+  }
+</script>
