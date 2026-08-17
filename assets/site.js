@@ -2,6 +2,16 @@ import { BATCHES, COMPETITORS, GROUP_LABELS, SITE, findCompetitor } from "./data
 
 function createFilterButtons(container, onClick) {
   if (!container) return;
+  if (container.querySelector("button")) {
+    container.querySelectorAll("button").forEach((button) => {
+      button.addEventListener("click", () => {
+        container.querySelectorAll("button").forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        onClick(button.dataset.group || "all");
+      });
+    });
+    return;
+  }
   GROUP_LABELS.forEach((group, index) => {
     const button = document.createElement("button");
     button.type = "button";
@@ -152,6 +162,7 @@ function renderHubPage() {
 
   const container = document.getElementById("compare-grid");
   if (!container) return;
+  if (container.children.length > 0) return;
   const basePath = container.dataset.basePath || "";
 
   COMPETITORS.forEach((item) => {
